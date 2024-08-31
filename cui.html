@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de CUI</title>
+    <link rel="stylesheet" href="cui.css">
+    <script src="cui.js" defer></script>
+</head>
+
+<body>
+    <h1>Generador de CUI</h1><br>
+    <form id="cuiForm">
+        <legend>Ingrese los datos del usuario</legend><br>
+        <label for="primerNombre">Primer nombre:</label>
+        <input type="text" id="primerNombre" name="primerNombre">
+        <br>
+
+        <!-- <label for="segundoNombre">Segundo nombre:</label>
+        <input type="text" id="segundoNombre" name="segundoNombre">
+        <br> -->
+
+        <label for="primerApellido">Primer apellido:</label>
+        <input type="text" id="primerApellido" name="primerApellido" required>
+        <br>
+
+        <!-- <label for="segundoApellido">Segundo apellido:</label>
+        <input type="text" id="segundoApellido" name="segundoApellido">
+        <br> -->
+
+        <label for="genero">Genero:</label>
+        <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+        <br>
+
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        <br>
+
+        <label for="departamento">Departamento:</label>
+        <select id="departamento" name="departamento" required>
+            <option value="">Seleccione</option>
+            <option value="Ahuachapán">Ahuachapán</option>
+            <option value="Cabañas">Cabañas</option>
+            <option value="Chalatenango">Chalatenango</option>
+            <option value="Cuscatlán">Cuscatlán</option>
+            <option value="La Libertad">La Libertad</option>
+            <option value="La Paz">La Paz</option>
+            <option value="La Unión">La Unión</option>
+            <option value="Morazán">Morazán</option>
+            <option value="San Miguel">San Miguel</option>
+            <option value="San Salvador">San Salvador</option>
+            <option value="San Vicente">San Vicente</option>
+            <option value="Santa Ana">Santa Ana</option>
+            <option value="Sonsonate">Sonsonate</option>
+            <option value="Usulután">Usulután</option>
+        </select>
+        <br>
+
+        <label for="municipio">Municipio:</label>
+        <select id="municipio" name="municipio" required>
+            <!-- Opciones de municipios se llenan dinámicamente -->
+        </select>
+        <br>
+        <button type="button" onclick="generarCUI()">Generar CUI</button>
+        <p>CUI generado:</p>
+        <p id="resultado"></p>
+        <button type="button" onclick="copiarCUI()">Copiar al portapapeles</button>
+    </form>
+
+</body>
+
+</html>
